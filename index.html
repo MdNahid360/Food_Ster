@@ -27,54 +27,54 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Restaurants</a>
+                        <a class="nav-link" href="#city"> Restaurants</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
 
                 </ul>
-                <button type="button"  data-toggle="modal" data-target="#exampleModal" class="btn signin-btn px-3 py-2">Sign In</button>
+                <button type="button" data-toggle="modal" data-target="#exampleModal"
+                    class="btn signin-btn px-3 py-2">Sign In</button>
 
             </div>
         </div>
     </nav>
     <!-- modal sign in -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="alrt">Submit</button>
-                        </form>
-                    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control inpt" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control inpt" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary order-btn" id="alrt">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
-
+    </div>
     <!-- sign in end -->
-    <header class="header d-flex align-items-center">
+    <header class="header d-flex align-items-center" id="home">
         <div class="container ">
-            <div class="row">
+            <div class="row d-flex align-items-center">
                 <div class="col-lg-6 col-md-12 d-block col-12 mt-2">
                     <div class="text-items">
                         <h1 class="h-txt">Delicious <span class="s">Food</span></h1>
@@ -108,12 +108,12 @@
             </div>
         </div>
     </header><br><br>
-    <section class="about mt-5">
+    <section class="about mt-5" id="about">
         <div class="container">
             <h2 class="text-center about-txt">About</h2>
             <div class="row mt-5">
                 <div class="col-lg-6 col-md-6 col-12 mt-2 d-flex justify-content-end about-hv">
-                    <img src="./src/img/about.png" alt="" class="img-fluid about-image">
+                    <img src="../src/img/about.png" alt="" class="img-fluid about-image">
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 mt-2">
                     <div class="tx-info">
@@ -127,37 +127,37 @@
             </div>
         </div>
     </section><br><br>
-    <section class="restaurants py-5">
+    <section class="restaurants py-5" id="city">
         <div class="container">
             <h2 class="text-center about-txt">Restaurants</h2>
             <br>
-            <h3 class="mt-5 th txt-h">
+            <h3 class="mt-5 th txt-h fon-s">
                 Find us in these cities and many more!
             </h3>
             <div class="row mt-4">
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/mymenshing.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Mymenshingh</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/dhaka.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Dhaka</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/coxbazar.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Cox's Bazar</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/shavar.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Shavar</h4>
@@ -168,28 +168,28 @@
 
             <div class="row mt-4">
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/kurigram.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Kurigram</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/meherpur.jpeg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Meherpur</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/jamalpur.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Jamalpur</h4>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 mt-2">
-                    <a href="#allFood"
+                    <a href="./page/foods.html"
                         class="text-decoration-none city-card d-flex align-items-end justify-content-center px-3">
                         <img src="./src/img/Sherpur.jpg" alt="" class="img-fluid hvr-img">
                         <h4 class="restorent-name text-center">Sherpur</h4>
@@ -199,7 +199,7 @@
             </div>
         </div>
     </section>
-    <section class="contact py-5">
+    <section class="contact py-5" id="contact">
         <div class="container">
             <h2 class="text-center about-txt mt-5">Contact</h2>
             <form action="" class="mt-5">
@@ -226,12 +226,12 @@
                 </label>
                 <textarea required class="form-control" id="exampleFormControlTextarea1"
                     placeholder="Enter your message . . ." rows="3"></textarea>
-                <input type="submit" value="Send" class="btn order-btn mt-5 px-5 py-3">
+                <input id="alrt" type="submit" value="Send" class="btn order-btn mt-5 px-5 py-3">
             </form>
         </div>
     </section>
     <footer class="py-4">
-        <span class="bg-waring text-center text-white">Copyright © 2021 Md Nahid. All Rights Reserved.</span>
+        <small class="bg-waring text-center text-white">Copyright © 2021 Md Nahid. All Rights Reserved.</small>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

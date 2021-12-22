@@ -10,6 +10,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--fon2);
 }
@@ -42,13 +46,16 @@ body {
 .nav-link {
     color: white !important;
 }
+
 .logo {
     width: 120px;
 }
+
 .apnd>i {
     color: white;
     font-size: 16px !important;
 }
+
 .order-btn {
     background: linear-gradient(30deg, rgb(25, 0, 54), rgb(51, 11, 88));
     border: 0px !important;
@@ -76,7 +83,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 680px;
 }
 
 .row {
@@ -115,7 +122,7 @@ body {
 .h-txt {
     color: var(--navcolor);
     font-weight: 700;
-    font-size: 50px !important;
+    font-size: 70px !important;
 }
 
 .about-txt {
@@ -140,6 +147,7 @@ body {
 }
 
 .txt-h {
+    font-size: 60px;
     color: var(--txtH);
     font-weight: 700;
 }
@@ -161,7 +169,7 @@ body {
 }
 
 .city-card {
-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     position: relative;
     background-image: linear-gradient(rgba(255, 0, 0, 0), rgb(0, 0, 0));
     background-size: cover;
@@ -183,7 +191,7 @@ transition: all 0.4s ease-in-out;
 }
 
 .hvr-img {
-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
@@ -199,60 +207,260 @@ transition: all 0.4s ease-in-out;
 }
 
 a:hover {
-    color: white!important;;
+    color: white !important;
+    ;
 }
+
 .city-card:hover .hvr-img {
-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     transform: scale(1.5);
 }
 
 .navbar-toggler-icon {
-    color: white!important;
- 
+    color: white !important;
+
 }
-.ri-menu-3-fill{
-    color: white!important;
-    font-size: 30px!important;
+
+.ri-menu-3-fill {
+    color: white !important;
+    font-size: 30px !important;
 }
-.about-image{
+
+.about-image {
     transition: all 0.2s ease-in-out;
-}.about-hv{
+}
+
+.about-hv {
     transition: all 0.2s ease-in-out;
 }
-.about-hv:hover{
+
+.about-hv:hover {
     transition: all 0.2s ease-in-out;
-    transform:scale(1.1);
+    transform: scale(1.1);
 }
-.contact{
+
+.contact {
     background-image: url(./img/contactBg.png);
     background-size: cover;
     background-position: center;
 }
-.inpt{
-    background-color:rgba(255, 255, 255, 0.397) !important;
-    border: 1px solid rgba(195, 0, 255, 0.11)!important;
-    padding: 25px 10px!important;
+
+.inpt {
+    background-color: rgba(255, 255, 255, 0.397) !important;
+    border: 1px solid rgba(195, 0, 255, 0.11) !important;
+    padding: 25px 10px !important;
     box-shadow: 0px 2px 8px 0px rgba(36, 2, 56, 0.185);
 }
-textarea{
-    height: 200px!important;
-    background-color:rgba(255, 255, 255, 0.397)!important;
-    box-shadow: 0px 2px 8px 0px rgba(36, 2, 56, 0.185)!important;
+
+textarea {
+    height: 200px !important;
+    background-color: rgba(255, 255, 255, 0.397) !important;
+    box-shadow: 0px 2px 8px 0px rgba(36, 2, 56, 0.185) !important;
 
 }
-label{
-    color:rgb(66, 7, 122);
+
+label {
+    color: rgb(66, 7, 122);
     font-weight: 500;
 }
 
-footer{
-    display: flex!important;
-    justify-content: center!important;
+footer {
+    margin-top: auto !important;
+    display: flex !important;
+    justify-content: center !important;
     background: var(--footer);
 }
-.signin-btn{
+
+.signin-btn {
     background: rgb(240, 116, 0);
     color: white;
-    border-radius: 8px!important;
-    padding: 10px 40px!important;
+    border-radius: 8px !important;
+    padding: 10px 40px !important;
+}
+
+.food-item {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 25px;
+}
+
+.container {
+    max-width: 90% !important;
+}
+
+.fon-s {
+    font-weight: 200 !important;
+    font-size: 40px;
+
+}
+
+.nav-item {
+    padding: 10px 30px;
+}
+
+.food-area {
+    padding-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0px 2px 11px 0px rgba(75, 75, 75, 0.151);
+}
+
+.dis {
+    height: 50px !important;
+    overflow: hidden;
+}
+
+.food-name {
+    font-weight: 500;
+}
+
+.ri-star-fill {
+    font-size: 20px !important;
+    color: rgb(111, 0, 255);
+}
+
+.rating {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.food-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-img {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.food-area::before {
+    transition: all 0.4s ease-in-out;
+    content: 'New';
+    display: block;
+    position: absolute;
+    color: white;
+    left: 0px;
+    top: 40px;
+    background: rgb(255, 153, 0);
+    padding: 4px 30px;
+    z-index: 1;
+
+
+}
+
+.h-img {
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.food-img:hover .h-img {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.2);
+}
+
+.header2 {
+    background-image: linear-gradient(to left, rgb(0, 227, 255, 0%) 50%, rgb(217, 241, 233, 46%)), url(../src/img/banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 680px;
+}
+
+.rw {
+    display: flex !important;
+    align-items: end !important;
+}
+
+.seach {
+    padding: 30px 10px !important;
+}
+
+.h-txt2 {
+    color: rgb(82, 7, 92);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.text-bg {
+    color: rgb(49, 7, 77);
+}
+
+.p-txt {
+    color: rgb(51, 51, 51);
+    font-weight: 100 !important;
+    font-size: 30px;
+}
+
+.seach {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid rgb(53, 3, 110);
+    border-right: none !important;
+}
+
+.seach-btn {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: white;
+    background: #2e0f76;
+    border: 1px solid rgb(53, 3, 110);
+    border-left: none !important;
+}
+
+.modal-dialog {
+    max-width: 95% !important;
+
+}
+
+.modal-header {
+    border: 0px !important;
+    background: rgb(222, 243, 245);
+}
+
+.modal-header>img {
+    width: 100vw;
+}
+
+.ri-shopping-bag-line {
+    color: rgb(255, 255, 255) !important;
+    font-size: 29px !important;
+}
+
+.shoping-info {
+
+    width: 50px;
+    height: 50px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 25px !important;
+    border-radius: 100%;
+}
+
+.nBox {
+    display: flex;
+    position: relative;
+
+}
+
+.notification {
+    height: 35px;
+    position: absolute;
+    top: 0;
+    width: 35px;
+    padding: 0px!important;
+    right: -10px;
+    border-radius: 100%;
+    background: rgba(255, 115, 0, 0.87);
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    font-size: 17px;
 }
