@@ -70,8 +70,8 @@ const details = info => {
                            <h3 class="price">$255</h3>
                         </div>
                     </div>
-                     <h4 class="name-f mt-2">${meal.strCategory}</h4>
-                    <p>${meal.strMeal}</p><hr>
+                     <h4 class="name-f mt-2">${meal.strMeal}</h4>
+                    <p>${meal.strCategory}</p><hr>
                     <button class="btn btn-warning w-100">Checkout</button>
                     
                 </div>
@@ -85,23 +85,49 @@ const details = info => {
 
 // data loaded with searching
 //
-    function searchFood(){
-        let searchBox = document.getElementById('searchFood').value
-        console.log(searchBox);
-        const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchBox}`
-        fetch(searchUrl)
+function searchFood() {
+    // let dflt = document.getElementById('srch')
+    // dflt.classList.add('d-block')
+
+    let searchBox = document.getElementById('searchFood').value
+    console.log(searchBox);
+    const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchBox}`
+    fetch(searchUrl)
         .then(res => res.json())
         .then(data => {
             data.meals.forEach(foodItems => {
-                console.log(foodItems.strCategory);
+                console.log(foodItems);
+                let fBox = document.getElementById('fBox')
+                let liData = document.createElement('li')
+                //  <img src = "${foodItems.strCategoryThumb}" class ="img-fluid h-img" alt =""/>
+                liData.innerHTML =`
+                     <div  class="food-img">
+                           <img src="${foodItems.strMealThumb}" class="img-fluid"/>
+                        </div>
+                        <div class="food-info mt-2 px-3 ">
+                            <h5 class="food-name">
+                               ${foodItems.strMeal}
+                            </h3>
+                            <div class="rating">
+                                <span><i class="ri-star-fill"></i></span><span class="ml-2">4.1/5</span>
+                            </div>
+                        </div>
+                        <div class="px-3 pb-3 dis">
+                            <small>${foodItems.strInstructions}</small>
+                        </div>
+                        <button onclick ="details('${foodItems.strMeal}')" class="order-btn mt-3 ml-3 os">Order</button>
+
+                `
+                liData.classList.add("food-area")
+                fBox.appendChild(liData)
             });
+
         })
-    }
-// end
+}
+// end ||| |||  ||| 
 // notification button & order details area
 let notification = document.getElementById('notificationClick')
 notification.onclick = function () {
     let checkOut = document.getElementById('chacout')
     checkOut.classList.toggle('d-block')
 }
-
