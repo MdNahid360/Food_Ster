@@ -464,3 +464,28 @@ footer {
     align-items: center;
     font-size: 17px;
 }
+.food-order{
+    border-radius: 8px;
+    padding: 20px 10px;
+    position: absolute;
+    width: 360px;
+    background: rgb(245, 232, 220);
+    top: 70px;
+    box-shadow: 0px 4px 11px 0px rgb(53, 51, 51);
+    right: 10px;
+}
+
+.ri-arrow-up-s-fill{
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: -50px;
+    right: 100px;
+    z-index: 1;
+}
+.price{
+    color:rgb(255, 115, 0);
+}
+.name-f{
+    color:rgb(111, 0, 255);
+}

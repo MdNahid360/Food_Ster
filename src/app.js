@@ -4,17 +4,21 @@ signinPopup.addEventListener('click', function () {
 })
 // food data loaded
 fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
-.then(res=> res.json())
-.then(data => displayData(data))
+    .then(res => res.json())
+    .then(data => displayData(data))
 
- const displayData = food => {
-     console.log(food.categories);
-     for (let i = 0; i < food.categories.length; i++) {
-         const allFood = food.categories[i];
-         console.log(allFood);
-         let ul = document.getElementById('ul')
-         let li = document.createElement('li')
-         li.innerHTML = `
+const displayData = food => {
+    console.log(food.categories);
+    if (food === null) {
+        let ld = document.getElementById('ld')
+        ld.innerHTML = `<h1>Loading</h1>`
+    } else {
+        for (let i = 0; i < food.categories.length; i++) {
+            const allFood = food.categories[i];
+            console.log(allFood);
+            let ul = document.getElementById('ul')
+            let li = document.createElement('li')
+            li.innerHTML = `
          
             <div  class="food-img">
                             <img src="${allFood.strCategoryThumb}" class="img-fluid h-img" alt="">
@@ -34,30 +38,70 @@ fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
 
      
          `
-         li.classList.add("food-area")
-         ul.appendChild(li)
-     }
- }
+            li.classList.add("food-area")
+            ul.appendChild(li)
+        }
+    }
+}
 
 //  details
-const details = info =>{
+const details = info => {
     let N = document.getElementById('notification')
-     let url =`https://www.themealdb.com/api/json/v1/1/search.php?s=${info}
+    let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${info}
 `
-   let S = N.innerText;
-   ++S;
-   console.log(S);
-   N.innerText=S
-   fetch(url)
-   .then(res => res.json())
-   .then(data => {
-       for (let i = 0; i < data.meals.length; i++) {
-           const meal = data.meals[i];
-           console.log(meal);
+    let S = N.innerText;
+    ++S;
+    console.log(S);
+    N.innerText = S
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            for (let i = 0; i < data.meals.length; i++) {
+                const meal = data.meals[i];
+                console.log(meal);
+                let popBox = document.getElementById('swich')
+                popBox.innerHTML = `
+                <div id="chacout" class="food-order d-none">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12 mt-2 px-2">
+                            <img src = "${meal.strMealThumb} " class = "img-fluid" />
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-12 mt-2 px-1">
+                           <h3 class="price">$255</h3>
+                        </div>
+                    </div>
+                     <h4 class="name-f mt-2">${meal.strCategory}</h4>
+                    <p>${meal.strMeal}</p><hr>
+                    <button class="btn btn-warning w-100">Checkout</button>
+                    
+                </div>
+           
+           `
+            }
+        })
 
-            
-       }
-   })
 
-    
 }
+
+// data loaded with searching
+//
+    function searchFood(){
+        let searchBox = document.getElementById('searchFood').value
+        console.log(searchBox);
+        const searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchBox}`
+        fetch(searchUrl)
+        .then(res => res.json())
+        .then(data => {
+            data.meals.forEach(foodItems => {
+                console.log(foodItems.strCategory);
+            });
+        })
+    }
+// end
+// notification button & order details area
+let notification = document.getElementById('notificationClick')
+notification.onclick = function () {
+    let checkOut = document.getElementById('chacout')
+    checkOut.classList.toggle('d-block')
+}
+
