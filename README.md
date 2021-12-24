@@ -1,3 +1,3 @@
 <img src="https://i.ibb.co/ckPL3Zc/Web-1366-1.png" />
 Food_ster<br />
-Link : <a href="https://pensive-benz-353b5c.netlify.app/page/foods.html">https://pensive-benz-353b5c.netlify.app/page/foods.html</a>
+Link : <a  href="https://pensive-benz-353b5c.netlify.app/page/foods.html">https://pensive-benz-353b5c.netlify.app/page/foods.html</a>
