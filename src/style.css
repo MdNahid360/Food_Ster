@@ -112,7 +112,7 @@ body {
 
 .nx {
     display: flex;
-    margin-top: 500px !important;
+    margin-top: 680px !important;
 }
 
 .s {
@@ -446,7 +446,7 @@ footer {
 .nBox {
     display: flex;
     position: relative;
-
+    z-index: 1;
 }
 
 .notification {
@@ -488,4 +488,214 @@ footer {
 }
 .name-f{
     color:rgb(111, 0, 255);
+}
+/* responsive */
+@media (min-width: 320px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 30px;
+
+    }
+    
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 47px !important;
+    }
+    .txt-h {
+        font-size: 36px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-gap: 25px;
+    }
+}
+@media (min-width: 360px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 30px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 47px !important;
+    }
+    .txt-h {
+        font-size: 36px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-gap: 25px;
+    }
+}
+@media (min-width: 420px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 30px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 47px !important;
+    }
+    .txt-h {
+        font-size: 36px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-gap: 25px;
+    }
+}
+@media (min-width: 480px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 30px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 47px !important;
+    }
+        .txt-h {
+            font-size: 36px;
+            color: var(--txtH);
+            font-weight: 700;
+        }
+.food-item {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-gap: 25px;
+}
+}
+@media (min-width: 576px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 30px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 47px !important;
+    }
+        .txt-h {
+            font-size: 36px;
+            color: var(--txtH);
+            font-weight: 700;
+        }
+.food-item {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-gap: 25px;
+}
+}
+
+
+@media (min-width: 768px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 40px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 70px !important;
+    }
+    .txt-h {
+        font-size:60px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-gap: 25px;
+}
+
+}
+
+
+@media (min-width: 992px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 40px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 70px !important;
+    }
+    .txt-h {
+        font-size: 60px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 25px;
+}
+
+}
+
+
+@media (min-width: 1200px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 40px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 70px !important;
+    }
+    .txt-h {
+        font-size: 60px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 25px;
+}
+
+}
+@media (min-width: 1280px) {
+    .fon-s {
+        font-weight: 200 !important;
+        font-size: 40px;
+
+    }
+    .h-txt {
+        color: var(--navcolor);
+        font-weight: 700;
+        font-size: 70px !important;
+    }
+    .txt-h {
+        font-size: 60px;
+        color: var(--txtH);
+        font-weight: 700;
+    }
+    .food-item {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    grid-gap: 25px;
+}
+
 }
